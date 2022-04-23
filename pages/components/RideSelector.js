@@ -11,8 +11,10 @@ const RideSelector = ({pickupCoordinates, dropoffCoordinates}) => {
                 ${dropoffCoordinates[0]}, ${dropoffCoordinates[1]}?access_token=pk.eyJ1Ijoic2ZyYW5rMTkiLCJhIjoiY2t2bmlrcG1kM3EzeTJucWl1ZGQxZ3czeiJ9.EsLuncXrksA-KZ4pOcrsKQ`
                 ).then(res => res.json())
                 .then(data => {
+                    console.log(data)
+                    console.log(pickupCoordinates, dropoffCoordinates)
                     setRideDuration(data.routes[0].duration / 100)
-                })
+                }) .catch(error => {console.warn(error)})
         },[pickupCoordinates, dropoffCoordinates])
         
     return (

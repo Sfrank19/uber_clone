@@ -45,23 +45,28 @@ export default function Home() {
           <Link href="/search">
             <ActionButton>
               <ActionButtonImage src= 'https://i.ibb.co/cyvcpfF/uberx.png'/>
-              ride
+              Ride
             </ActionButton>
           </Link>
 
+          <Link href="/comingSoon">
             <ActionButton>
               <ActionButtonImage src= 'https://i.ibb.co/n776JLm/bike.png'/>
-              wheels
+              Wheels
             </ActionButton>
+          </Link>
 
+            <Link href="/comingSoon">
             <ActionButton>
               <ActionButtonImage src= 'https://i.ibb.co/5RjchBg/uberschedule.png'/>
-              reserve
+              Reserve
             </ActionButton>
+            </Link>
 
         </ActionButtons>
-
+        <Link href="/search">
         <InputButton>Where To?</InputButton>
+        </Link>
       </ActionItems>
     </Wrapper>
   )
@@ -109,5 +114,9 @@ h-3/5
 `
 
 const InputButton = tw.div`
-h-20 bg-gray-200 text-2xl p-4 flex items-center mt-8
+h-20 bg-gray-200 text-2xl p-4 flex items-center mt-8 cursor-pointer
+`
+
+const span = tw.div`
+text-xs
 `
