@@ -10,7 +10,7 @@ const Login = () => {
                 onAuthStateChanged(auth, user => {
                     if (user){router.push('/')} 
                 })
-            },[])
+            },[router])
     return ( 
         <Wrapper>
             <UberLogo src="https://i.ibb.co/ZMhy8ws/uber-logo.png" />

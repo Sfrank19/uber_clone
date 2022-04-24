@@ -1,7 +1,4 @@
 import {useEffect, useState} from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import tw from "tailwind-styled-components"
 import Map from "./components/map"
 import Link from 'next/link'
@@ -26,7 +23,7 @@ export default function Home() {
         router.push('/login')
       }
     })
-  },[])
+  },[router])
 
 
   return (
@@ -42,21 +39,21 @@ export default function Home() {
         </Header>
         <ActionButtons>
 
-          <Link href="/search">
+          <Link href={"/search"} passHref>
             <ActionButton>
               <ActionButtonImage src= 'https://i.ibb.co/cyvcpfF/uberx.png'/>
               Ride
             </ActionButton>
           </Link>
 
-          <Link href="/comingSoon">
+          <Link href={"/comingSoon"}passHref>
             <ActionButton>
               <ActionButtonImage src= 'https://i.ibb.co/n776JLm/bike.png'/>
               Wheels
             </ActionButton>
           </Link>
 
-            <Link href="/comingSoon">
+            <Link href={"/comingSoon"} passHref>
             <ActionButton>
               <ActionButtonImage src= 'https://i.ibb.co/5RjchBg/uberschedule.png'/>
               Reserve
@@ -64,7 +61,7 @@ export default function Home() {
             </Link>
 
         </ActionButtons>
-        <Link href="/search">
+        <Link href={"/search"} passHref>
         <InputButton>Where To?</InputButton>
         </Link>
       </ActionItems>
