@@ -7,6 +7,7 @@ const RideSelector = ({pickupCoordinates, dropoffCoordinates}) => {
         const [rideDuration, setRideDuration] = useState(0)
 
         useEffect(() => {
+             // eslint-disable-next-line react-hooks/exhaustive-deps
             rideDuration = fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${pickupCoordinates[0]}, ${pickupCoordinates[1]};
                 ${dropoffCoordinates[0]}, ${dropoffCoordinates[1]}?access_token=pk.eyJ1Ijoic2ZyYW5rMTkiLCJhIjoiY2t2bmlrcG1kM3EzeTJucWl1ZGQxZ3czeiJ9.EsLuncXrksA-KZ4pOcrsKQ`
                 ).then(res => res.json())
