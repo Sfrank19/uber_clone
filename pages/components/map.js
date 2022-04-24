@@ -34,7 +34,6 @@ const Map = (props) => {
     }, [props.pickupCoordinates, props.dropoffCoordinates])
 
     const addToMap = (map, coordinates) => {
-        // Create a default Marker and add it to the map.
         const marker1 = new mapboxgl.Marker()
         .setLngLat(coordinates)
         .addTo(map);
